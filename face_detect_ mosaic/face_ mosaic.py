@@ -16,7 +16,7 @@ while True:
         # 轉灰階
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         # 選定模型
-        faceCascade = cv2.CascadeClassifier(r"haarcascade_frontalcatface.xml")
+        faceCascade = cv2.CascadeClassifier("haarcascade_frontalcatface.xml")
         # 檢查是否成功加載
         if faceCascade.empty():
             print("Error: Unable to load cascade classifier file.")
@@ -33,7 +33,7 @@ while True:
             mosaic = cv2.resize(mosaic, (mw,mh), interpolation=cv2.INTER_LINEAR)
             mosaic = cv2.resize(mosaic, (w,h), interpolation=cv2.INTER_NEAREST)
             frame[y:y+h, x:x+w] = mosaic
-        cv2.imshow('oxxostudio', frame)
+        cv2.imshow('mosaic_cam', frame)
        
     else:
         break
