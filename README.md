@@ -1,6 +1,8 @@
 # Requirements
+```bash
 pip install opencv-python  
 pip install opencv_contrib_python
+```
 # Demo
 - 人臉偵測  
 file_anme:face_detect  
